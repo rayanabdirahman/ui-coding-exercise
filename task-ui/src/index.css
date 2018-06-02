@@ -1,0 +1,74 @@
+/* =========================
+    App styles
+ ===========================*/
+
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+    box-sizing: border-box;
+}
+
+/* css variables */
+:root {
+    --font-family: 'Raleway', sans-serif;
+    --font-weight: 400;
+    --color: #1a243b;
+    --background-color: #f5f6fa;
+    --white: #fff;
+    --blue: #4f87fb;
+    --grey: #F0EFF1;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    color: var(--color);
+    background-color: var(--background-color);
+    width: 80vw;
+    margin: 50px;
+}
+
+/* table styles  */
+table {
+    background-color: var(--white);
+    margin-top: 50px;
+    padding: 25px 50px;
+    border-radius: 3px;
+    border-collapse: separate;
+    border-spacing: 10px 25px;
+    text-align: center;
+    width: 100%;
+}
+
+thead tr th {
+    border-bottom: 5px solid var(--blue);
+}
+
+/* search input styles */
+input {
+    padding: 5px 20px;
+    width: 50%;
+    height: 44px;
+    border: 1px solid var(--grey);
+    background-color: var(--white);
+    margin-right: 20px;
+    border-radius: 3px;
+    font-size: 17px;
+}
+
+
+/* sort button styles */
+.btn--sort {
+    background-color: var(--blue);
+    border-radius: 3px;
+    height: 44px;
+    width: auto;
+    padding: 5px 20px;
+    color: var(--white);
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
