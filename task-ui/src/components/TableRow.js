@@ -2,8 +2,18 @@
 import React from 'react';
 
 const TableRow = (props) => {
+    // store props values
+    const { id, amount, business, name, type, account} = props;
+
     return (
-        <h1>TTableRow Component </h1>
+        <tr>
+            <td>{id}</td>
+            <td>{amount}</td>
+            <td>{business}</td>
+            <td>{name}</td>
+            <td>{type}</td>
+            <td>{account}</td>
+        </tr>
     )
 };
 
