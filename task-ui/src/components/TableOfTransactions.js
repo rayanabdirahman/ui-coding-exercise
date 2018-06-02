@@ -26,15 +26,15 @@ const TableOfTransactions = props => {
 
     // return table
     return (
-        <table>
+        <table className="table">
             <thead>
                 <tr>
-                    <td>id</td>
-                    <td>amount</td>
-                    <td>business</td>
-                    <td>name</td>
-                    <td>type</td>
-                    <td>account</td>
+                    <th>id</th>
+                    <th>amount</th>
+                    <th>business</th>
+                    <th>name</th>
+                    <th>type</th>
+                    <th>account</th>
                 </tr>
             </thead>
             <tbody>
