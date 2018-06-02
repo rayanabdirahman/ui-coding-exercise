@@ -12,6 +12,7 @@ const ENDPOINT = 'http://localhost:3000/transactions';
 
 // import components
 import TableOfTransactions from './TableOfTransactions';
+import SearchTransactions from './SearchTransactions';
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class App extends Component {
     // state
     this.state = {
       // store transaction array
-      transactions: []
+      transactions: [],
     }
   }
 
@@ -38,15 +39,31 @@ class App extends Component {
       // catch any given errors
       .catch(error => console.error(`Error: Data could not be fetched - ${error}`));
   }
+  /**
+   * Get value from SearchTransactions and pass it to searchTransactionsByName
+   * @param {event} e - change event
+   */
+  handleChange(e) {
+    // store input value
+    const searchedForName = e.target.value;
+    
+    // store array of filtered transactions
+    const FilteredTransactions = searchTransactionsByName(searchedForName, this.state.transactions);
 
-
+    // set filterTransaction array in state
+    this.setState({filteredTransactions: FilteredTransactions});
+  }
+  
+  // render components
   render() {
     return (
       <div>
-        <TableOfTransactions transactions={this.state.transactions}/>
+        <SearchTransactions searchValue={this.state.search} handleChange={this.handleChange.bind(this)}/>
+        <TableOfTransactions transactions={this.state.filteredTransactions || this.state.transactions }/>
       </div>
     )
   }
 };
 
+// export App
 export default App;

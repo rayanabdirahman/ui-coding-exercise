@@ -4,7 +4,8 @@ import React from 'react';
 // import components
 import TableRow from './TableRow';
 
-const TableOfTransactions = (props) => {
+// Take an Array of transactions and render it as a table
+const TableOfTransactions = props => {
     // store transactions array from props
     const { transactions } = props;
 
@@ -23,6 +24,7 @@ const TableOfTransactions = (props) => {
         );
     });
 
+    // return table
     return (
         <table>
             <thead>
@@ -42,4 +44,5 @@ const TableOfTransactions = (props) => {
     )
 };
 
+// export TableOfTransactions
 export default TableOfTransactions;
