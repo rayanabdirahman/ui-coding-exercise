@@ -5,7 +5,7 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "test": "mocha --compilers js:babel-register ./src/test/*.spec.js",
-    "test:watch": "mocha --watch ./src/test ./"
+    "test:watch": "mocha --watch --compilers js:babel-register ./src/test ./"
   },
   "dependencies": {
     "react": "^16.4.0",

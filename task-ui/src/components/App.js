@@ -10,12 +10,15 @@ import { searchTransactionsByName } from 'task-library/searchTransactionsByName'
 // URL to transactions
 const ENDPOINT = 'http://localhost:3000/transactions';
 
+// import components
+import TableOfTransactions from './TableOfTransactions';
+
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>My React App</h1>
+        <TableOfTransactions />
       </div>
     )
   }
