@@ -1,6 +1,6 @@
 // import test dependencies
 import React from 'react';
-import ReactDOM from 'react-dom';
+import "isomorphic-fetch";
 
 // config enzyme
 import Enzyme from 'enzyme';

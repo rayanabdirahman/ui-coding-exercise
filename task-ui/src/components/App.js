@@ -73,7 +73,7 @@ class App extends Component {
   // render components
   render() {
     return (
-      <div className="App">
+      <div>
         <SearchTransactions handleChange={this.handleChange.bind(this)}/>
         <SortButton handleClick={this.handleClick.bind(this)}/>
         <TableOfTransactions transactions={this.state.filteredTransactions || this.state.transactions }/>
