@@ -20,7 +20,13 @@ Using the **Test Server** write a user interface that renders a **grid** of tran
 * [React](https://reactjs.org/)
 * [webpack](https://webpack.js.org/)
 * [babel](https://babeljs.io/)
+* [mocha](https://mochajs.org/)
+* [chai](http://www.chaijs.com/)
 
 ### Usage
 * to start server run `npm start`
 * to build run `npm run build`
+
+### Running the tests
+* run unit tests using `npm test`
+* watch unit tests using `npm run test:watch`
