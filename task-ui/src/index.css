@@ -48,7 +48,7 @@ thead tr th {
 /* search input styles */
 input {
     padding: 5px 20px;
-    width: 80%;
+    width: 50%;
     height: 44px;
     border: 1px solid var(--grey);
     background-color: var(--white);

@@ -23,9 +23,11 @@ Using the **Test Server** write a user interface that renders a **grid** of tran
 * [mocha](https://mochajs.org/)
 * [chai](http://www.chaijs.com/)
 * [enzyme](http://airbnb.io/enzyme/)
+* [CSS]
 
 ### Usage
-* to start server run `npm start`
+* To begin, you will need to start the test server in the ui-coding-exercise folder. to start the test server run `npm run server`
+* You can then run `npm start` in task-ui folder to start the app. The app will be running on [http://localhost:8080/](http://localhost:8080/)
 * to build run `npm run build`
 
 ### Running the tests
