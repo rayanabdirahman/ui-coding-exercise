@@ -5,6 +5,10 @@
 // import expect function from chai
 const expect = require('chai').expect;
 
+/*
+ * @param {string} sortTransactionsByAmount - description for test suite
+ * @param {funciton} wrapper for unit tests
+ */
 describe('sortTransactionsByAmount', () => {
   // import sortTransactionsByAmount function
   const sortTransactionsByAmount = require('../sortTransactionsByAmount').sortTransactionsByAmount;
