@@ -73,7 +73,10 @@ const SAMPLE_DATA = {
 
 // click event handle for SortButton
 const handleClick = () => {
+    // store sorted transactions
     const sortedTransactions = sortTransactionsByAmount(SAMPLE_DATA.TRANSACTIONS);
+
+    return sortedTransactions;
 };
 
 describe('<Sort />', () => {
