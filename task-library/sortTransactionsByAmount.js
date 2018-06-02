@@ -5,7 +5,7 @@
  * @param {array} transactions - an array of transactions
  * @description Return a sorted array of transactions by amount
  */
-const sortTransactionsByAmount = function(transactions) {
+const sortTransactionsByAmount = transactions => {
   /*
    * return a sorted array of transactions by amount
    * @param {object} a - transaction object needed for compareFunction;
