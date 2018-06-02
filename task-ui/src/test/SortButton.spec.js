@@ -71,7 +71,10 @@ const SAMPLE_DATA = {
     ]
 };
 
-// click event handle for SortButton
+/**
+ * click event handle for SortButton
+ * @param {event} e - click event
+ */
 const handleClick = () => {
     // store sorted transactions
     const sortedTransactions = sortTransactionsByAmount(SAMPLE_DATA.TRANSACTIONS);

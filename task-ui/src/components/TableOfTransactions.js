@@ -12,6 +12,7 @@ const TableOfTransactions = (props) => {
     const mappedTransactions = transactions.map((transaction, index) => {
         return (
             <TableRow 
+            key={index}
             id={transaction.id} 
             amount={transaction.amount} 
             business={transaction.business} 
@@ -25,12 +26,14 @@ const TableOfTransactions = (props) => {
     return (
         <table>
             <thead>
-                <tr>id</tr>
-                <tr>amount</tr>
-                <tr>business</tr>
-                <tr>name</tr>
-                <tr>type</tr>
-                <tr>account</tr>
+                <tr>
+                    <td>id</td>
+                    <td>amount</td>
+                    <td>business</td>
+                    <td>name</td>
+                    <td>type</td>
+                    <td>account</td>
+                </tr>
             </thead>
             <tbody>
                 {mappedTransactions}

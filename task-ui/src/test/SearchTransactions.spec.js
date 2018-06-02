@@ -42,7 +42,10 @@ const SAMPLE_DATA = {
     ]
 };
 
-// on change event handler for SearchTransactions
+/**
+ *  on change event handler for SearchTransactions
+ * @param {event} e - onChange event
+ */
 const handleChange = (e) => {
     // store searched for name
     const searchedForName = e.target.value;

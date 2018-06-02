@@ -22,6 +22,7 @@ Using the **Test Server** write a user interface that renders a **grid** of tran
 * [babel](https://babeljs.io/)
 * [mocha](https://mochajs.org/)
 * [chai](http://www.chaijs.com/)
+* [enzyme](http://airbnb.io/enzyme/)
 
 ### Usage
 * to start server run `npm start`
