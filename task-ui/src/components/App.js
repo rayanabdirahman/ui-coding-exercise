@@ -13,6 +13,7 @@ const ENDPOINT = 'http://localhost:3000/transactions';
 // import components
 import TableOfTransactions from './TableOfTransactions';
 import SearchTransactions from './SearchTransactions';
+import SortButton from './SortButton';
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class App extends Component {
 
     // state
     this.state = {
-      // store transaction array
+      // store transactions array
       transactions: [],
     }
   }
@@ -53,12 +54,28 @@ class App extends Component {
     // set filterTransaction array in state
     this.setState({filteredTransactions: FilteredTransactions});
   }
-  
+
+   /**
+   * Sort transactions table by amount
+   * @param {event} e - change event
+   */
+  handleClick(e) {
+    // store array of transactions
+    const transactionsArr = this.state.filteredTransactions || this.state.transactions;
+
+    // store array of sorted transactions
+    const sortedTransactions = sortTransactionsByAmount(transactionsArr);
+    
+    // set filterTransaction array in state with sortedTransactions
+    this.setState({filteredTransactions: sortedTransactions});
+  };
+
   // render components
   render() {
     return (
       <div>
         <SearchTransactions searchValue={this.state.search} handleChange={this.handleChange.bind(this)}/>
+        <SortButton handleClick={this.handleClick.bind(this)}/>
         <TableOfTransactions transactions={this.state.filteredTransactions || this.state.transactions }/>
       </div>
     )

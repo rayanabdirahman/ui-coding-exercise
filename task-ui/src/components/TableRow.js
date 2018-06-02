@@ -1,7 +1,8 @@
 // import react dependencies
 import React from 'react';
 
-const TableRow = (props) => {
+// display table rows
+const TableRow = props => {
     // store props values
     const { id, amount, business, name, type, account} = props;
 
@@ -17,4 +18,5 @@ const TableRow = (props) => {
     )
 };
 
+// export TableRow
 export default TableRow;
