@@ -5,7 +5,7 @@
  * @param {array} transactions - an array of transactions
  * @description Return a sorted array of transactions by amount
  */
-const sortTransactionsByAmount = transactions => {
+const sortTransactionsByAmount = ({transactions, ascending=true}) => {
   /*
    * return a sorted array of transactions by amount
    * @param {object} a - transaction object needed for compareFunction;
@@ -16,8 +16,12 @@ const sortTransactionsByAmount = transactions => {
     const transactionA = a.amount;
     const transactionB = b.amount;
 
-    // sort transactions by amount
-    return transactionA - transactionB;
+    if(ascending) {
+      // sort transactions by amount
+      return transactionA - transactionB;
+    }
+
+    return transactionB - transactionA;
   });
 };
 

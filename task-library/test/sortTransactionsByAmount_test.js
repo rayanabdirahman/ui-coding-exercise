@@ -48,11 +48,15 @@ describe('sortTransactionsByAmount', () => {
 
   // test specs
   it('should return an array', () => {
-    expect(sortTransactionsByAmount(SAMPLE_DATA.TRANSACTIONS)).to.be.an('array');
+    expect(sortTransactionsByAmount({transactions: SAMPLE_DATA.TRANSACTIONS, ascending:true})).to.be.an('array');
   });
 
-  it('should sort array by amount', () => {
-    expect(sortTransactionsByAmount(SAMPLE_DATA.TRANSACTIONS)).to.deep.equal(SAMPLE_DATA.SORTED_ARRAY);
+  it('should sort by ascending order by default', () => {
+    expect(sortTransactionsByAmount({transactions: SAMPLE_DATA.TRANSACTIONS})).to.deep.equal(SAMPLE_DATA.SORTED_ARRAY);
+  });
+
+  it('should sort by descending amount', () => {
+    expect(sortTransactionsByAmount({transactions: SAMPLE_DATA.TRANSACTIONS, ascending:false})).to.deep.equal(SAMPLE_DATA.SORTED_ARRAY.reverse());
   });
 });
 
