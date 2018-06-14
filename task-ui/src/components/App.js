@@ -23,6 +23,7 @@ class App extends Component {
     this.state = {
       // store transactions array
       transactions: [],
+      order: null
     }
   }
 
@@ -60,23 +61,24 @@ class App extends Component {
    * @param {event} e - change event
    */
   handleClick(e) {
+    const order = !this.state.order;
+  
     // store array of transactions
     const transactionsArr = this.state.filteredTransactions || this.state.transactions;
 
     // store array of sorted transactions
-    const sortedTransactions = sortTransactionsByAmount(transactionsArr);
+    const sortedTransactions = sortTransactionsByAmount({transactions: transactionsArr, ascending: order});
     
     // set filterTransaction array in state with sortedTransactions
-    this.setState({filteredTransactions: sortedTransactions});
+    this.setState({filteredTransactions: sortedTransactions, order: order});
   };
 
   // render components
   render() {
     return (
       <div>
-        <SearchTransactions handleChange={this.handleChange.bind(this)}/>
-        <SortButton handleClick={this.handleClick.bind(this)}/>
-        <TableOfTransactions transactions={this.state.filteredTransactions || this.state.transactions }/>
+        <SortButton handleClick={this.handleClick.bind(this)} order={this.state.order ? 'descedning' : 'ascedning'}/>
+        <TableOfTransactions search={<SearchTransactions handleChange={this.handleChange.bind(this)}/>}  transactions={this.state.filteredTransactions || this.state.transactions }/>
       </div>
     )
   }

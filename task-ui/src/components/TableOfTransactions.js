@@ -31,8 +31,13 @@ const TableOfTransactions = props => {
                 <tr>
                     <th>id</th>
                     <th>amount</th>
-                    <th>business</th>
-                    <th>name</th>
+                    <th>
+                        business
+                    </th>
+                    <th>
+                        {props.search}
+                        name
+                    </th>
                     <th>type</th>
                     <th>account</th>
                 </tr>
